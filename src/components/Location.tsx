@@ -32,7 +32,7 @@ export default function Location() {
             className="relative rounded-2xl overflow-hidden border border-dark-lighter h-96"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27648.123456789!2d-51.9!3d-30.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDU0JzAwLjAiUyA1McKwNTQnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              src="https://maps.google.com/maps?q=R.+Sen.+Pinheiro+Machado,+600,+São+Lourenço+do+Sul,+RS,+96170-000&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -59,8 +59,9 @@ export default function Location() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Endereço</h3>
-                  <p className="text-muted-foreground text-sm">São Lourenço do Sul, RS</p>
-                  <p className="text-muted-foreground text-sm">Brasil</p>
+                  <p className="text-muted-foreground text-sm">R. Sen. Pinheiro Machado, 600</p>
+                  <p className="text-muted-foreground text-sm">Centro, São Lourenço do Sul - RS</p>
+                  <p className="text-muted-foreground text-sm">CEP: 96170-000</p>
                 </div>
               </div>
             </div>
@@ -110,7 +111,7 @@ export default function Location() {
             </div>
 
             <a
-              href="https://maps.google.com/?q=São+Lourenço+do+Sul+RS"
+              href="https://maps.google.com/?q=R.+Sen.+Pinheiro+Machado,+600,+São+Lourenço+do+Sul,+RS,+96170-000"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full flex items-center justify-center gap-2"

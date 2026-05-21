@@ -23,7 +23,11 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0" />
-                <span>São Lourenço do Sul, RS</span>
+                <span>R. Sen. Pinheiro Machado, 600 - Centro</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <MapPin className="w-5 h-5 text-gold flex-shrink-0 opacity-0" />
+                <span>São Lourenço do Sul - RS, 96170-000</span>
               </div>
             </div>
           </div>
