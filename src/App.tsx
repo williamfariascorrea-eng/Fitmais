@@ -44,6 +44,14 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false)
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div className="min-h-screen bg-dark">
       {/* Header */}
@@ -115,17 +123,16 @@ function App() {
             >
               <nav className="flex flex-col p-4 gap-2">
                 {navLinks.map((link, index) => (
-                  <motion.a
+                  <motion.button
                     key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => handleNavClick(link.href)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors py-3 px-4 rounded-lg hover:bg-dark-light"
+                    className="text-left text-sm font-medium text-muted-foreground hover:text-gold transition-colors py-3 px-4 rounded-lg hover:bg-dark-light"
                   >
                     {link.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
                 <motion.a
                   href="https://api.whatsapp.com/send?phone=5553991343791&text=Oi%2C%20quero%20começar%20minha%20transformação!"
