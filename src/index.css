@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F4E4A6;
+  --color-dark: #0A0A0A;
+  --color-dark-light: #141414;
+  --color-dark-lighter: #1E1E1E;
+  --color-surface: #1A1A1A;
+  --color-orange: #FF6B35;
+  --color-muted-foreground: #A1A1AA;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-dark);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-dark);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-light);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-dark font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-lg hover:shadow-gold/20 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold/50 text-gold font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:bg-gold hover:text-dark hover:border-gold hover:scale-105 active:scale-95;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl p-6 border border-dark-lighter transition-all duration-300 hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold to-orange bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-dark/80 backdrop-blur-xl border border-dark-lighter;
+  }
+}
