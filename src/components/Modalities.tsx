@@ -37,7 +37,7 @@ export default function Modalities() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="modalidades" className="py-20 md:py-32 bg-dark-light relative overflow-hidden">
+    <section id="modalidades" className="py-16 sm:py-20 md:py-32 bg-dark-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -63,12 +63,12 @@ export default function Modalities() {
         </motion.div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex overflow-x-auto gap-3 mb-8 md:mb-12 pb-2 md:justify-center scrollbar-hide">
           {modalities.map((mod, index) => (
             <button
               key={mod.title}
               onClick={() => setActiveIndex(index)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
                 activeIndex === index
                   ? 'bg-gold text-dark shadow-lg shadow-gold/20'
                   : 'bg-dark-lighter text-muted-foreground hover:text-gold border border-dark-lighter hover:border-gold/30'
@@ -86,7 +86,7 @@ export default function Modalities() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-8 items-center"
+          className="grid md:grid-cols-2 gap-6 md:gap-8 items-center"
         >
           {(() => {
             const mod = modalities[activeIndex]
@@ -99,27 +99,27 @@ export default function Modalities() {
                     <img
                       src={mod.image}
                       alt={mod.title}
-                      className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
-                    <div className="absolute bottom-6 left-6">
+                    <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6">
                       <div className="flex items-center gap-2 mb-2">
-                        <Icon className="w-6 h-6 text-gold" />
-                        <h3 className="text-2xl font-bold">{mod.title}</h3>
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
+                        <h3 className="text-xl sm:text-2xl font-bold">{mod.title}</h3>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <p className="text-muted-foreground leading-relaxed text-lg">
+                <div className="space-y-4 sm:space-y-6">
+                  <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
                     {mod.description}
                   </p>
 
                   <div className="space-y-3">
                     {mod.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-gold rounded-full" />
+                        <div className="w-2 h-2 bg-gold rounded-full flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </div>
                     ))}
@@ -129,9 +129,9 @@ export default function Modalities() {
                     href="https://api.whatsapp.com/send?phone=5553991343791&text=Oi%2C%20quero%20saber%20mais%20sobre%20as%20modalidades!"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center gap-2 group"
+                    className="btn-primary inline-flex items-center gap-2 group text-sm sm:text-base"
                   >
-                    Quero saber mais <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    Quero saber mais <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </>

@@ -32,7 +32,7 @@ export default function TrialClass() {
 
   if (submitted) {
     return (
-      <section className="py-20 md:py-32 bg-dark relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-32 bg-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
@@ -76,7 +76,7 @@ export default function TrialClass() {
   }
 
   return (
-    <section className="py-20 md:py-32 bg-dark relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-32 bg-dark relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-orange/5 via-transparent to-transparent" />
@@ -90,7 +90,7 @@ export default function TrialClass() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -103,7 +103,7 @@ export default function TrialClass() {
               <span className="text-gold text-sm font-semibold">100% Gratuito</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Aula Experimental <br />
               <span className="text-gold">Grátis</span>
             </h2>
@@ -144,7 +144,7 @@ export default function TrialClass() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="card p-8 border-gold/20">
+            <div className="card p-5 sm:p-8 border-gold/20">
               <h3 className="text-xl font-bold mb-2">Agende sua aula</h3>
               <p className="text-muted-foreground text-sm mb-6">Preencha abaixo e entraremos em contato</p>
 

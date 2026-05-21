@@ -61,7 +61,7 @@ const plans = [
 
 export default function Plans() {
   return (
-    <section id="planos" className="py-20 md:py-32 bg-dark-light relative overflow-hidden">
+    <section id="planos" className="py-16 sm:py-20 md:py-32 bg-dark-light relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
 
@@ -80,7 +80,7 @@ export default function Plans() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -89,7 +89,7 @@ export default function Plans() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`card relative overflow-hidden ${plan.popular ? 'border-gold shadow-xl shadow-gold/20 scale-105' : ''}`}
+              className={`card relative overflow-hidden ${plan.popular ? 'border-gold shadow-xl shadow-gold/20 lg:scale-105' : ''}`}
             >
               {plan.popular && (
                 <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-gold to-orange text-dark text-xs font-bold py-2 text-center flex items-center justify-center gap-1">

@@ -10,7 +10,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="py-20 md:py-32 bg-dark-light relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-32 bg-dark-light relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -26,7 +26,7 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 auto-rows-[150px] sm:auto-rows-[200px]">
           {images.map((img, index) => (
             <motion.div
               key={index}

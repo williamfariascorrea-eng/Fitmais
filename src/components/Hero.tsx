@@ -35,7 +35,7 @@ export default function Hero() {
           y: [0, -50, 0],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl"
+        className="absolute top-1/4 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-gold/5 rounded-full blur-3xl"
       />
       <motion.div
         animate={{
@@ -43,7 +43,7 @@ export default function Hero() {
           y: [0, 50, 0],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-        className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-orange/5 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/4 w-40 sm:w-80 h-40 sm:h-80 bg-orange/5 rounded-full blur-3xl"
       />
 
       <motion.div style={{ y, opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
@@ -67,7 +67,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
             >
               Transforme seu{' '}
               <span className="relative">
@@ -90,7 +90,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-lg leading-relaxed"
             >
               Ambiente premium com equipamentos de última geração, profissionais qualificados e uma comunidade que te motiva a alcançar seus objetivos.
             </motion.p>
@@ -119,11 +119,11 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="mt-12 flex items-center gap-8"
+              className="mt-8 sm:mt-12 flex items-center gap-4 sm:gap-8"
             >
-              <div className="flex -space-x-3">
+              <div className="flex -space-x-2 sm:-space-x-3">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-dark-lighter border-2 border-dark flex items-center justify-center text-xs font-bold text-gold">
+                  <div key={i} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-dark-lighter border-2 border-dark flex items-center justify-center text-xs font-bold text-gold">
                     {String.fromCharCode(64 + i)}
                   </div>
                 ))}

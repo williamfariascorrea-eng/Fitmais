@@ -3,7 +3,7 @@ import { MapPin, Phone, Clock, Navigation } from 'lucide-react'
 
 export default function Location() {
   return (
-    <section className="py-20 md:py-32 bg-dark-light relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-32 bg-dark-light relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
 
@@ -29,7 +29,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden border border-dark-lighter h-96"
+            className="relative rounded-2xl overflow-hidden border border-dark-lighter h-64 sm:h-80 md:h-96"
           >
             <iframe
               src="https://maps.google.com/maps?q=R.+Sen.+Pinheiro+Machado,+600,+São+Lourenço+do+Sul,+RS,+96170-000&t=&z=16&ie=UTF8&iwloc=&output=embed"

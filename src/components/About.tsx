@@ -44,7 +44,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; d
   }, [isVisible, end, duration])
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold text-gold mb-2">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gold mb-2">
       {count}{suffix}
     </div>
   )
@@ -59,7 +59,7 @@ export default function About() {
   ]
 
   return (
-    <section id="sobre" className="py-20 md:py-32 bg-dark-light relative overflow-hidden">
+    <section id="sobre" className="py-16 sm:py-20 md:py-32 bg-dark-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -83,7 +83,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-12 md:mb-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
                 alt="Interior da academia"
-                className="relative z-10 rounded-2xl shadow-2xl w-full h-80 object-cover"
+                className="relative z-10 rounded-2xl shadow-2xl w-full h-48 sm:h-64 md:h-80 object-cover"
               />
             </div>
           </motion.div>

@@ -14,7 +14,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 md:py-32 bg-dark relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-32 bg-dark relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
 
@@ -33,7 +33,7 @@ export default function Benefits() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}

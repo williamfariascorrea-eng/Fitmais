@@ -3,12 +3,12 @@ import { Star, MessageCircle } from 'lucide-react'
 
 export default function Team() {
   return (
-    <section id="equipe" className="py-20 md:py-32 bg-dark relative overflow-hidden">
+    <section id="equipe" className="py-16 sm:py-20 md:py-32 bg-dark relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +79,7 @@ export default function Team() {
                 <img
                   src={img}
                   alt="Academia Fitmais"
-                  className={`w-full ${index === 0 ? 'h-48' : 'h-40'} object-cover`}
+                  className={`w-full ${index === 0 ? 'h-32 sm:h-48' : 'h-32 sm:h-40'} object-cover`}
                 />
               </motion.div>
             ))}
