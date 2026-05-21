@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Fitmais+ Centro Fitness
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional da Fitmais+ Centro Fitness, academia de São Lourenço do Sul - RS.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vite** + **React** + **TypeScript**
+- **Tailwind CSS** v4
+- **Framer Motion** para animações
+- **Lucide React** para ícones
 
-## React Compiler
+## Rodando local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Abre em `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estrutura
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── animations/     # FadeIn, StaggerContainer
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Benefits.tsx
+│   ├── Modalities.tsx
+│   ├── Team.tsx
+│   ├── Gallery.tsx
+│   ├── Testimonials.tsx
+│   ├── TrialClass.tsx  # Formulário de aula experimental
+│   ├── Plans.tsx
+│   ├── InstagramFeed.tsx
+│   ├── FAQ.tsx
+│   ├── Location.tsx
+│   └── Footer.tsx
+── assets/
+│   └── fitmais-logo.png
+├── App.tsx
+└── index.css
+```
+
+## Seções do site
+
+- Hero com parallax e animações
+- Sobre + contadores animados
+- Benefícios (8 cards)
+- Modalidades com tabs interativas
+- Equipe e galeria
+- Depoimentos de alunos reais
+- Aula experimental grátis (formulário de leads)
+- Planos e preços
+- Feed do Instagram
+- FAQ com accordion
+- Localização com mapa
+
+---
+
+Feito por William Corrêa
